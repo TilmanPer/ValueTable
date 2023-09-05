@@ -1,0 +1,62 @@
+<form class="table-settings">
+  <div class="form-group">
+    <label for="inputFunction">Function</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="x*x"
+      [(ngModel)]="inputFunction"
+      name="inputFunction"
+      required
+    />
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <label for="inputStart">Start</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="0"
+        [(ngModel)]="inputStart"
+        name="inputStart"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="inputEnd">End</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="10"
+        [(ngModel)]="inputEnd"
+        name="inputEnd"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="inputStep">Step</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="1"
+        [(ngModel)]="inputStep"
+        name="inputStep"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="inputDecimals">Decimals</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="2"
+        [(ngModel)]="inputDecimals"
+        name="inputDecimals"
+        required
+      />
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+    CREATE TABLE
+  </button>
+</form>

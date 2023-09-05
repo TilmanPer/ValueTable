@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --text: #000000;
+  --background: #f4f4e1;
+  --primary: #35338e;
+  --secondary: #eeefd2;
+  --accent: #4341b4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f7f7f7;
+    --background: #121212;
+    --primary: #35338e;
+    --secondary: #0f0f0f;
+    --accent: #adade1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+}

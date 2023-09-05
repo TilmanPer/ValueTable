@@ -1,0 +1,19 @@
+main {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  app-table-settings {
+    width: 500px;
+    margin-bottom: 20px;
+  }
+
+  app-value-table {
+    width: 500px;
+    height: 500px;
+  }
+}

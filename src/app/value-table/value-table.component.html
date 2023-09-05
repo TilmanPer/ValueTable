@@ -1,0 +1,57 @@
+<div class="filter-container">
+  <div class="filter-group">
+    <label for="inputFilterFunction">
+      Filter Function
+      <span
+        class="info-icon"
+        (mouseenter)="showInfo = true"
+        (mouseleave)="showInfo = false"
+        >&#9432;
+        <div class="info-popup" *ngIf="showInfo">
+          <ul>
+            <h3 style="margin-top: 0">How does it work?</h3>
+            <li>Use <i>f</i> to represent the function value.</li>
+            <li>
+              Supported operations:<br />
+              <i>+, -, *, /, %, ^</i>
+            </li>
+            <li>Supported comparisons:<br /><i><, >, <=, >=, ==</i></li>
+            <li>Combine conditions with <br /><i>&</i> (AND logic).</li>
+            <h3>Examples</h3>
+            <li><i>f > 5</i> only shows values greater than 5.</li>
+            <li><i>f > 5 & f < 10</i> only shows values between 5 and 10.</li>
+            <li><i>f % 2 == 0</i> only shows even values.</li>
+          </ul>
+        </div>
+      </span>
+      <!-- Unicode info circle icon -->
+    </label>
+
+    <!-- red border when invalid -->
+    <input
+      type="text"
+      class="filter"
+      [(ngModel)]="inputFilterFunction"
+      name="inputFilterFunction"
+      placeholder="f>5"
+      (input)="filterData()"
+      [ngStyle]="{ color: filterFunctionValid ? 'green' : 'red' }"
+    />
+  </div>
+</div>
+
+<div class="value-table-container">
+  <table class="value-table">
+    <thead>
+      <tr>
+        <th>{{ variableName }}</th>
+        <th>f = {{ function }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of tableData">
+        <td *ngFor="let data of row">{{ data }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
